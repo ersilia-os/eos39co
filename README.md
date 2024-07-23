@@ -26,6 +26,7 @@ Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture
 ## Ersilia model URLs
 * [GitHub](https://github.com/ersilia-os/eos39co)
 * [AWS S3](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip)
+* [DockerHub](https://hub.docker.com/r/ersiliaos/eos39co) (AMD64, ARM64)
 
 ## Citation
 

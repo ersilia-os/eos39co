@@ -26,5 +26,10 @@
     "Publication": "https://openreview.net/forum?id=6K2RM6wVqKu",
     "Source Code": "https://github.com/deepmodeling/Uni-Mol",
     "License": "GPL-3.0-only",
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip"
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip",
+    "DockerHub": "https://hub.docker.com/r/ersiliaos/eos39co",
+    "Docker Architecture": [
+        "AMD64",
+        "ARM64"
+    ]
 }
