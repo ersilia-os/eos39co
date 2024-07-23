@@ -23,21 +23,6 @@ def load_model(framework_dir, checkpoints_dir):
     return mdl
 
 
-def String(x):
-    x = str(x)
-    if not x:
-        return None
-    if x == "nan":
-        return None
-    if x == "null":
-        return None
-    if x == "False":
-        return None
-    if x == "None":
-        return None
-    return x
-
-
 class Model(object):
     def __init__(self):
         self.DATA_FILE = "_data.csv"
@@ -83,7 +68,7 @@ class Model(object):
             R = []
             for r in reader:
                 R += [
-                    {"outcome": [String(x) for x in r]}
+                    {"outcome": [float(x) for x in r]}
                 ]  # <-- EDIT: Modify according to type of output (Float, String...)
         meta = {"outcome": h}
         result = {"result": R, "meta": meta}
