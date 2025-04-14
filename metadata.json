@@ -3,22 +3,19 @@
     "Slug": "unimol-representation",
     "Status": "Ready",
     "Title": "Uni-Mol molecular representation",
-    "Description": "Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture for pre-training molecular representations that capture 3D information. The model is trained on >200M conformations. The current model outputs a representation embedding.\n",
+    "Description": "Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture for pre-training molecular representations that capture 3D information. The model is trained on >200M conformations. The current model outputs a representation embedding.",
+    "Deployment": [
+        "Local"
+    ],
     "Source": "Local",
     "Source Type": "External",
+    "Task": "Representation",
+    "Subtask": "Featurization",
     "Input": [
         "Compound"
     ],
-    "Input Shape": "Single",
     "Input Dimension": 1,
-    "Task": "Representation",
-    "Subtask": "Featurization",
-    "Biomedical Area": [
-        "Any"
-    ],
-    "Target Organism": [
-        "Not Applicable"
-    ],
+    "Input Shape": "Single",
     "Output": [
         "Value"
     ],
@@ -28,20 +25,25 @@
     "Tag": [
         "Fingerprint"
     ],
-    "Publication": "https://openreview.net/forum?id=6K2RM6wVqKu",
+    "Biomedical Area": [
+        "Any"
+    ],
+    "Target Organism": [
+        "Not Applicable"
+    ],
     "Publication Type": "Preprint",
     "Publication Year": 2024,
+    "Publication": "https://openreview.net/forum?id=6K2RM6wVqKu",
     "Source Code": "https://github.com/deepmodeling/Uni-Mol",
     "License": "GPL-3.0-only",
     "Contributor": "miquelduranfrigola",
     "Incorporation Date": "2024-07-23",
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos39co",
     "Docker Architecture": [
         "AMD64",
         "ARM64"
     ],
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip",
-    "Deployment": [
-        "Local"
-    ]
+    "Model Size": 1.0,
+    "Environment Size": 6151.0
 }
