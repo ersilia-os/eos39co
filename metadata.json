@@ -1,35 +1,47 @@
 {
     "Identifier": "eos39co",
     "Slug": "unimol-representation",
-    "Status": "In progress",
+    "Status": "Ready",
     "Title": "Uni-Mol molecular representation",
-    "Description": "Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture for pre-training molecular representations that capture 3D information. The model is trained on >200M conformations. The current model outputs a representation embedding.",
-    "Mode": "Pretrained",
-    "Task": [
-        "Representation"
-    ],
+    "Description": "Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture for pre-training molecular representations that capture 3D information. The model is trained on >200M conformations. The current model outputs a representation embedding.\n",
+    "Source": "Local",
+    "Source Type": "External",
     "Input": [
         "Compound"
     ],
     "Input Shape": "Single",
+    "Input Dimension": 1,
+    "Task": "Representation",
+    "Subtask": "Featurization",
+    "Biomedical Area": [
+        "Any"
+    ],
+    "Target Organism": [
+        "Not Applicable"
+    ],
     "Output": [
-        "Descriptor"
+        "Value"
     ],
-    "Output Type": [
-        "Float"
-    ],
-    "Output Shape": "List",
+    "Output Dimension": 512,
+    "Output Consistency": "Fixed",
     "Interpretation": "Uni-Mol representation embedding",
     "Tag": [
         "Fingerprint"
     ],
     "Publication": "https://openreview.net/forum?id=6K2RM6wVqKu",
+    "Publication Type": "Preprint",
+    "Publication Year": 2024,
     "Source Code": "https://github.com/deepmodeling/Uni-Mol",
     "License": "GPL-3.0-only",
-    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip",
+    "Contributor": "miquelduranfrigola",
+    "Incorporation Date": "2024-07-23",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos39co",
     "Docker Architecture": [
         "AMD64",
         "ARM64"
+    ],
+    "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip",
+    "Deployment": [
+        "Local"
     ]
 }
