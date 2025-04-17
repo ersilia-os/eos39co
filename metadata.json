@@ -37,7 +37,7 @@
     "Source Code": "https://github.com/deepmodeling/Uni-Mol",
     "License": "GPL-3.0-only",
     "Contributor": "miquelduranfrigola",
-    "Incorporation Date": "2024-07-23",
+    "Incorporation Date": "2024-07-22",
     "S3": "https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip",
     "DockerHub": "https://hub.docker.com/r/ersiliaos/eos39co",
     "Docker Architecture": [
