@@ -52,10 +52,6 @@ _10 of 512 columns are shown_
 - **Environment Size (Mb):** `6150`
 - **Image Size (Mb):** `5854.3`
 
-**Computational Performance (seconds):**
-- 4 inputs: `42.34`
-- 20 inputs: `44.3`
-- 100 inputs: `71.06`
 
 ### References
 - **Source Code**: [https://github.com/deepmodeling/Uni-Mol](https://github.com/deepmodeling/Uni-Mol)
