@@ -50,12 +50,12 @@ _10 of 512 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `6057`
-- **Image Size (Mb):** `5823.67`
+- **Image Size (Mb):** `5748.5`
 
 **Computational Performance (seconds):**
-- 10 inputs: `39.67`
-- 100 inputs: `101.6`
-- 10000 inputs: `-1`
+- 10 inputs: `30.41`
+- 100 inputs: `45.12`
+- 10000 inputs: `1165.92`
 
 ### References
 - **Source Code**: [https://github.com/deepmodeling/Uni-Mol](https://github.com/deepmodeling/Uni-Mol)
