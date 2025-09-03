@@ -4,6 +4,7 @@ Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture
 
 This model was incorporated on 2024-07-22.
 
+
 ## Information
 ### Identifiers
 - **Ersilia Identifier:** `eos39co`
@@ -13,7 +14,7 @@ This model was incorporated on 2024-07-22.
 - **Task:** `Representation`
 - **Subtask:** `Featurization`
 - **Biomedical Area:** `Any`
-- **Target Organism:** `Not Applicable`
+- **Target Organism:** `Any`
 - **Tags:** `Fingerprint`
 
 ### Input
