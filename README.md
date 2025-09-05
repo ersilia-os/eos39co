@@ -2,8 +2,7 @@
 
 Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture for pre-training molecular representations that capture 3D information. The model is trained on >200M conformations. The current model outputs a representation embedding.
 
-This model was incorporated on 2024-07-22.
-
+This model was incorporated on 2024-07-22.Last packaged on 2025-09-05.
 
 ## Information
 ### Identifiers
@@ -51,12 +50,12 @@ _10 of 512 columns are shown_
 ### Resource Consumption
 - **Model Size (Mb):** `1`
 - **Environment Size (Mb):** `7401`
-- **Image Size (Mb):** `5748.5`
+- **Image Size (Mb):** `7169.69`
 
 **Computational Performance (seconds):**
-- 10 inputs: `30.41`
-- 100 inputs: `45.12`
-- 10000 inputs: `1165.92`
+- 10 inputs: `31.36`
+- 100 inputs: `45.61`
+- 10000 inputs: `1180.63`
 
 ### References
 - **Source Code**: [https://github.com/deepmodeling/Uni-Mol](https://github.com/deepmodeling/Uni-Mol)
