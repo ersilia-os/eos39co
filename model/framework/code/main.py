@@ -1,11 +1,20 @@
 import os
 import csv
 import sys
+import tempfile
 import numpy as np
-from unimol_tools import UniMolRepr
 
-input_file = sys.argv[1]
-output_file = sys.argv[2]
+input_file = os.path.abspath(sys.argv[1])
+output_file = os.path.abspath(sys.argv[2])
+
+# unimol_tools creates a 'logs/' dir in os.getcwd() at import time,
+# which fails in read-only Singularity environments (CWD='/' → tries to create '/logs').
+# Redirect by temporarily chdir-ing to a writable temp dir.
+_log_dir = tempfile.mkdtemp()
+_orig_dir = os.getcwd()
+os.chdir(_log_dir)
+from unimol_tools import UniMolRepr
+os.chdir(_orig_dir)
 
 root = os.path.dirname(os.path.abspath(__file__))
 
