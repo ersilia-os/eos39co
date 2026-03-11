@@ -7,12 +7,11 @@ import numpy as np
 input_file = os.path.abspath(sys.argv[1])
 output_file = os.path.abspath(sys.argv[2])
 
-# unimol_tools creates a 'logs/' dir in os.getcwd() at import time,
-# which fails in read-only Singularity environments (CWD='/' → tries to create '/logs').
-# Redirect by temporarily chdir-ing to a writable temp dir.
-_log_dir = tempfile.mkdtemp()
+
+_tmp_dir = tempfile.mkdtemp()
+os.environ['UNIMOL_WEIGHT_DIR'] = _tmp_dir
 _orig_dir = os.getcwd()
-os.chdir(_log_dir)
+os.chdir(_tmp_dir)
 from unimol_tools import UniMolRepr
 os.chdir(_orig_dir)
 
