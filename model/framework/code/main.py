@@ -10,10 +10,11 @@ output_file = os.path.abspath(sys.argv[2])
 
 _tmp_dir = tempfile.mkdtemp()
 os.environ['UNIMOL_WEIGHT_DIR'] = _tmp_dir
-_orig_dir = os.getcwd()
-os.chdir(_tmp_dir)
+os.environ['HF_HOME'] = _tmp_dir
+
 from unimol_tools import UniMolRepr
-os.chdir(_orig_dir)
+import unimol_tools.models.unimol as _unimol_module
+_unimol_module.WEIGHT_DIR = _tmp_dir
 
 root = os.path.dirname(os.path.abspath(__file__))
 
