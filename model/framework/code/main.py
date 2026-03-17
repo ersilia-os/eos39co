@@ -1,44 +1,52 @@
 import os
 import csv
 import sys
+import shutil
 import tempfile
 import numpy as np
 
 input_file = os.path.abspath(sys.argv[1])
 output_file = os.path.abspath(sys.argv[2])
 
-
+# unimol_tools writes weights, HF cache and logs to locations that are
+# read-only inside Apptainer (site-packages, cwd=/). Redirect everything
+# to a fresh writable temp directory for this run.
 _tmp_dir = tempfile.mkdtemp()
 os.environ['UNIMOL_WEIGHT_DIR'] = _tmp_dir
 os.environ['HF_HOME'] = _tmp_dir
 
 _orig_dir = os.getcwd()
-os.chdir(_tmp_dir)
+os.chdir(_tmp_dir)  # base_logger creates ./logs relative to cwd at import time
 from unimol_tools import UniMolRepr
 import unimol_tools.models.unimol as _unimol_module
-_unimol_module.WEIGHT_DIR = _tmp_dir
+_unimol_module.WEIGHT_DIR = _tmp_dir  # override module-level constant set at import
 os.chdir(_orig_dir)
-
-root = os.path.dirname(os.path.abspath(__file__))
 
 with open(input_file, "r") as f:
     reader = csv.reader(f)
     next(reader)
     smiles_list = [r[0] for r in reader]
 
+root = os.path.dirname(os.path.abspath(__file__))
+_checkpoints_dir = os.path.join(root, '..', '..', 'checkpoints')
+_weight_file = 'mol_pre_all_h_220816.pt'
+_weight_src = os.path.join(_checkpoints_dir, _weight_file)
+if os.path.isfile(_weight_src):
+    shutil.copy2(_weight_src, os.path.join(_tmp_dir, _weight_file))
+
 clf = UniMolRepr(data_type='molecule', remove_hs=False, use_gpu=False)
 unimol_repr = clf.get_repr(smiles_list, return_atomic_reprs=False)
 
 X = np.array(unimol_repr['cls_repr'])
 
-header = ["dim_{0}".format(str(i).zfill(3)) for i in range(X.shape[1])]
+assert len(smiles_list) == X.shape[0]
 
-input_len = len(smiles_list)
-output_len = X.shape[0]
-assert input_len == output_len
+header = ["dim_{0}".format(str(i).zfill(3)) for i in range(X.shape[1])]
 
 with open(output_file, "w") as f:
     writer = csv.writer(f)
     writer.writerow(header)
-    for i in range(X.shape[0]):
-        writer.writerow(list(X[i,:]))
+    for row in X:
+        writer.writerow(row.tolist())
+
+shutil.rmtree(_tmp_dir, ignore_errors=True)
