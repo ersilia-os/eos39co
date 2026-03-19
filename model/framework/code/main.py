@@ -18,8 +18,11 @@ os.environ['HF_HOME'] = _tmp_dir
 _orig_dir = os.getcwd()
 os.chdir(_tmp_dir)  # base_logger creates ./logs relative to cwd at import time
 from unimol_tools import UniMolRepr
-import unimol_tools.models.unimol as _unimol_module
-_unimol_module.WEIGHT_DIR = _tmp_dir  # override module-level constant set at import
+# Patch WEIGHT_DIR in every unimol_tools submodule that defines it, not just
+# unimol_tools.models.unimol — conformer.py and others keep their own copy.
+for _m in list(sys.modules.values()):
+    if 'unimol_tools' in getattr(_m, '__name__', '') and hasattr(_m, 'WEIGHT_DIR'):
+        _m.WEIGHT_DIR = _tmp_dir
 os.chdir(_orig_dir)
 
 with open(input_file, "r") as f:
