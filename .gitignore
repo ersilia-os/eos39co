@@ -133,5 +133,6 @@ dmypy.json
 # eosvc - large artifacts managed via S3, not git
 model/checkpoints/*
 !model/checkpoints/README.md
+!model/checkpoints/mol_pre_all_h_220816.pt
 model/fit/
 .eosvc/
