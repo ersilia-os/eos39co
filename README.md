@@ -1,6 +1,6 @@
 # Uni-Mol molecular representation
 
-Uni-Mol encodes a molecule into 512 features while reasoning explicitly in three dimensions, taking atomic coordinates as input rather than a flat graph. Zhou and colleagues pretrained the transformer on a large collection of conformations together with protein pockets, adding a position-recovery objective so the network learns geometry rather than memorising conformers. Because the representation depends on 3D structure, results vary with the conformer supplied, and individual dimensions have no chemical reading.
+Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture for pre-training molecular representations that capture 3D information. The model is trained on >200M conformations. The current model outputs a representation embedding.
 
 This model was incorporated on 2024-07-22.Last packaged on 2026-04-14.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2024-07-22.Last packaged on 2026-04-14.
 ### Output
 - **Output Dimension:** `512`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** 512 features encoding molecular structure from a 3D-aware pretrained transformer.
+- **Interpretation:** Uni-Mol representation embedding
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
