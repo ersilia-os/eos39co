@@ -1,6 +1,6 @@
 # Uni-Mol molecular representation
 
-Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture for pre-training molecular representations that capture 3D information. The model is trained on >200M conformations. The current model outputs a representation embedding.
+Uni-Mol encodes a molecule into 512 features while reasoning explicitly in three dimensions, taking atomic coordinates as input rather than a flat graph. Zhou and colleagues pretrained the transformer on a large collection of conformations together with protein pockets, adding a position-recovery objective so the network learns geometry rather than memorising conformers. Because the representation depends on 3D structure, results vary with the conformer supplied, and individual dimensions have no chemical reading.
 
 This model was incorporated on 2024-07-22.Last packaged on 2026-04-14.
 
@@ -23,7 +23,7 @@ This model was incorporated on 2024-07-22.Last packaged on 2026-04-14.
 ### Output
 - **Output Dimension:** `512`
 - **Output Consistency:** `Fixed`
-- **Interpretation:** Uni-Mol representation embedding
+- **Interpretation:** 512 features encoding molecular structure from a 3D-aware pretrained transformer.
 
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
@@ -61,11 +61,11 @@ _10 of 512 columns are shown_
 - **Source Code**: [https://github.com/deepmodeling/Uni-Mol](https://github.com/deepmodeling/Uni-Mol)
 - **Publication**: [https://doi.org/10.26434/chemrxiv-2022-jjm0j-v4](https://doi.org/10.26434/chemrxiv-2022-jjm0j-v4)
 - **Publication Type:** `Preprint`
-- **Publication Year:** `2024`
+- **Publication Year:** `2023`
 - **Ersilia Contributor:** [miquelduranfrigola](https://github.com/miquelduranfrigola)
 
 ### License
-This package is licensed under a [GPL-3.0](https://github.com/ersilia-os/ersilia/blob/master/LICENSE) license. The model contained within this package is licensed under a [GPL-3.0-only](LICENSE) license.
+This package is licensed under a [GPL-3.0](https://github.com/ersilia-os/ersilia/blob/master/LICENSE) license. The model contained within this package is licensed under a [MIT](LICENSE) license.
 
 **Notice**: Ersilia grants access to models _as is_, directly from the original authors, please refer to the original code repository and/or publication if you use the model in your research.
 
