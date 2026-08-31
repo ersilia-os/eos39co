@@ -2,7 +2,7 @@
 
 Uni-Mol offers a simple and effective SE(3) equivariant transformer architecture for pre-training molecular representations that capture 3D information. The model is trained on >200M conformations. The current model outputs a representation embedding.
 
-This model was incorporated on 2024-07-22.Last packaged on 2026-04-14.
+This model was incorporated on 2024-07-22.Last packaged on 2026-08-31.
 
 ## Information
 ### Identifiers
@@ -44,18 +44,18 @@ _10 of 512 columns are shown_
 - **Source:** `Local`
 - **Source Type:** `External`
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos39co](https://hub.docker.com/r/ersiliaos/eos39co)
-- **Docker Architecture:** `AMD64`
+- **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `183`
 - **Environment Size (Mb):** `5372`
-- **Image Size (Mb):** `5844.64`
+- **Image Size (Mb):** `5906.94`
 
 **Computational Performance (seconds):**
-- 10 inputs: `39.58`
-- 100 inputs: `56.45`
-- 10000 inputs: `1156.61`
+- 10 inputs: `34.72`
+- 100 inputs: `46.97`
+- 10000 inputs: `1197.73`
 
 ### References
 - **Source Code**: [https://github.com/deepmodeling/Uni-Mol](https://github.com/deepmodeling/Uni-Mol)
