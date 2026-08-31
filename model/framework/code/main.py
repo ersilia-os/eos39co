@@ -71,7 +71,7 @@ for i in range(0, len(smiles_list), BATCH_SIZE):
 X = np.array(rows)
 assert len(smiles_list) == X.shape[0]
 
-header = ["dim_{0}".format(str(i).zfill(3)) for i in range(X.shape[1])]
+header = ["feat_{0}".format(str(i).zfill(3)) for i in range(X.shape[1])]
 
 with open(output_file, "w") as f:
     writer = csv.writer(f)
