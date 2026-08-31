@@ -28,16 +28,16 @@ This model was incorporated on 2024-07-22.Last packaged on 2026-04-14.
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| dim_000 | float |  | Dimension index 0 of the Uni-Mol embedding |
-| dim_001 | float |  | Dimension index 1 of the Uni-Mol embedding |
-| dim_002 | float |  | Dimension index 2 of the Uni-Mol embedding |
-| dim_003 | float |  | Dimension index 3 of the Uni-Mol embedding |
-| dim_004 | float |  | Dimension index 4 of the Uni-Mol embedding |
-| dim_005 | float |  | Dimension index 5 of the Uni-Mol embedding |
-| dim_006 | float |  | Dimension index 6 of the Uni-Mol embedding |
-| dim_007 | float |  | Dimension index 7 of the Uni-Mol embedding |
-| dim_008 | float |  | Dimension index 8 of the Uni-Mol embedding |
-| dim_009 | float |  | Dimension index 9 of the Uni-Mol embedding |
+| feat_000 | float |  | Feature index 0 of the Uni-Mol embedding |
+| feat_001 | float |  | Feature index 1 of the Uni-Mol embedding |
+| feat_002 | float |  | Feature index 2 of the Uni-Mol embedding |
+| feat_003 | float |  | Feature index 3 of the Uni-Mol embedding |
+| feat_004 | float |  | Feature index 4 of the Uni-Mol embedding |
+| feat_005 | float |  | Feature index 5 of the Uni-Mol embedding |
+| feat_006 | float |  | Feature index 6 of the Uni-Mol embedding |
+| feat_007 | float |  | Feature index 7 of the Uni-Mol embedding |
+| feat_008 | float |  | Feature index 8 of the Uni-Mol embedding |
+| feat_009 | float |  | Feature index 9 of the Uni-Mol embedding |
 
 _10 of 512 columns are shown_
 ### Source and Deployment
