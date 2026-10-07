@@ -3,7 +3,7 @@
     "Slug": "unimol-representation",
     "Status": "Ready",
     "Title": "Uni-Mol molecular representation",
-    "Description": "Uni-Mol encodes a molecule into 512 features while reasoning explicitly in three dimensions, taking atomic coordinates as input rather than a flat graph. Zhou and colleagues pretrained the transformer on a large collection of conformations together with protein pockets, adding a position-recovery objective so the network learns geometry rather than memorising conformers. Because the representation depends on 3D structure, results vary with the conformer supplied, and individual dimensions have no chemical reading.",
+    "Description": "Uni-Mol turns a molecule into 512 features while reasoning explicitly in three dimensions, taking generated atomic coordinates rather than a flat graph as input. Zhou and colleagues pretrained this SE(3)-equivariant transformer on 209 million conformations covering 19 million molecules, adding a coordinate-recovery objective so the network learns geometry instead of memorising conformers. Features are read from the whole-molecule token, shift with the conformer supplied, and carry no chemical reading dimension by dimension.",
     "Deployment": [
         "Local"
     ],
