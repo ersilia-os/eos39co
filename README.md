@@ -2,7 +2,8 @@
 
 Uni-Mol turns a molecule into 512 features while reasoning explicitly in three dimensions, taking generated atomic coordinates rather than a flat graph as input. Zhou and colleagues pretrained this SE(3)-equivariant transformer on 209 million conformations covering 19 million molecules, adding a coordinate-recovery objective so the network learns geometry instead of memorising conformers. Features are read from the whole-molecule token, shift with the conformer supplied, and carry no chemical reading dimension by dimension.
 
-This model was incorporated on 2024-07-22.Last packaged on 2026-08-31.
+This model was incorporated on 2024-07-22.
+Last packaged on 2026-08-31.
 
 ## Information
 ### Identifiers
@@ -46,6 +47,7 @@ _10 of 512 columns are shown_
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos39co](https://hub.docker.com/r/ersiliaos/eos39co)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos39co.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos39co_v2.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos39co_v2.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `183`
